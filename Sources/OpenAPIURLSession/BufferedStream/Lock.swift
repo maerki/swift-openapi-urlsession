@@ -30,8 +30,12 @@
 import Darwin
 #elseif canImport(Glibc)
 import Glibc
+#elseif canImport(Musl)
+import Musl
 #elseif os(Windows)
-import WinSDK
+import ucrt
+#else
+#error(Unknown platform)
 #endif
 
 #if os(Windows)
